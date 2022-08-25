@@ -1,4 +1,5 @@
 ## Afterhours IDEATION
+Giving students a platform, to easily communicate with classmates, share, store and access resources. The app would also include features such as a calendar and to-do list to help students stay organized and on top of their studies. Also, help students to connect with other students who are in the same major or course taking the same course, which would allow them to collaborate and learn from each other.
 
 ### Pages 
 
