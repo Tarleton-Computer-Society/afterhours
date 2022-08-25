@@ -12,17 +12,19 @@ Improved Version of Group Me
 - [Mason Bane](https://github.com/MBane04)
 - [Aden Tessman](https://github.com/artessman)
 - [Arthur Kitchen](Ar7hur-031)
+- [Weston Sublett] (https://github.com/wsman217)
 
 ### Backend Dev.
 - [Teddy Oweh](https://github.com/teddyoweh)
 - [Renato Rios](https://github.com/RenatoRios1)
 - [Bizimana Musa](https://github.com/Bizimanamusa)
+- [Weston Sublett] (https://github.com/wsman217)
 
 
 ### UI Design Team.
 - [Juliana Rodriguez](https://github.com/JuliRod01)
 - [Teddy Oweh](https://github.com/teddyoweh)
--[Garrett Aderholdt](https://github.com/DaGooseYT)
+- [Garrett Aderholdt](https://github.com/DaGooseYT)
 - [Conner Homrighaus](https://github.com/Chomrighaus)
 
 ### DevOPS and Testing.
