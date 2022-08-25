@@ -12,7 +12,7 @@ Improved Version of Group Me
 - [Mason Bane](https://github.com/MBane04)
 - [Aden Tessman](https://github.com/artessman)
 - [Arthur Kitchen](Ar7hur-031)
-- [Weston Sublett] (https://github.com/wsman217)
+- [Weston Sublett](https://github.com/wsman217)
 
 ### Backend Dev.
 - [Teddy Oweh](https://github.com/teddyoweh)
