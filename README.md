@@ -18,7 +18,7 @@ Improved Version of Group Me
 - [Teddy Oweh](https://github.com/teddyoweh)
 - [Renato Rios](https://github.com/RenatoRios1)
 - [Bizimana Musa](https://github.com/Bizimanamusa)
-- [Weston Sublett] (https://github.com/wsman217)
+- [Weston Sublett](https://github.com/wsman217)
 
 
 ### UI Design Team.
