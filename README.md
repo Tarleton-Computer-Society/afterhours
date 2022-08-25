@@ -5,6 +5,7 @@ Improved Version of Group Me
 ## Teams
 ### Product / Project Overview Team.
 - [Ambrose Caer](https://github.com/StarsofanImmortal)
+- [Domanic DeVivo](https://github.com/DDevivo98)
 
 ### Frontend Dev.
 - [Teddy Oweh](https://github.com/teddyoweh)
