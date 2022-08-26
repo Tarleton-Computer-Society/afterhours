@@ -12,6 +12,7 @@ Improved Version of Group Me
 - [Mason Bane](https://github.com/MBane04)
 - [Aden Tessman](https://github.com/artessman)
 - [Arthur Kitchen](Ar7hur-031)
+- [John-Thomas Bolger](https://github.com/JTBolger)
 - [Weston Sublett](https://github.com/wsman217)
 
 ### Backend Dev.
