@@ -1,6 +1,6 @@
 import React from 'react'
-import Logo from '../assets/images/afterhours-logo.png'
-import './Navbar.css'
+import Logo from '../assets/images/afterhours-logo.png' // import logo
+ 
 
 export default function NavBar() {
   return (
