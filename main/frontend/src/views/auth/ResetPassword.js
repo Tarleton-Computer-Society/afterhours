@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+ 
 import PropTypes from 'prop-types';
 
 // #region constants
@@ -31,7 +31,7 @@ constructor(props) {
 }
 
     render() {
-        return <div></div>;
+        return <div>reset</div>;
     }
 }
 
