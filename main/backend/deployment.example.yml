@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-starter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend-starter
+  template:
+    metadata:
+      labels:
+        app: backend-starter
+    spec:
+      securityContext:
+        runAsNonRoot: true
+      containers:
+        - name: backend-starter
+          image: de.icr.io/default/backend-starter:latest
+          ports:
+            - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-starter-service
+  labels:
+    app: backend-starter-service
+spec:
+  selector:
+    app: backend-starter
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 3000
