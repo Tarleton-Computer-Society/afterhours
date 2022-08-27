@@ -1,7 +1,7 @@
 import React from 'react';
  
 import PropTypes from 'prop-types';
-
+import { NavBar } from '../components';
 // #region constants
 
 // #endregion
@@ -31,7 +31,10 @@ constructor(props) {
 }
 
     render() {
-        return <div>Home</div>;
+        return <>
+            <NavBar/>
+            home
+        </>;
     }
 }
 
