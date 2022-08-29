@@ -1,5 +1,5 @@
 import React from 'react';
- 
+import { NavBar } from '../../components';
 import PropTypes from 'prop-types';
 
 // #region constants
@@ -31,7 +31,24 @@ constructor(props) {
 }
 
     render() {
-        return <div>Login</div>;
+        return <>
+
+            <NavBar/>
+           <label>
+            <ul>
+                <li>
+                    home
+                </li>
+                <li>
+                   login
+                </li>
+                <li>
+                  register
+                </li>
+            </ul>
+            </label>
+        
+        </>;
     }
 }
 
