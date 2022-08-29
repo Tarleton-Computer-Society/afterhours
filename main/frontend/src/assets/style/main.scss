@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;800&display=swap');
+/* Gloal stylesheet*/
+
+@import url('./components/globals.scss');
 
 /* Stylesheet for Navbar*/
 
 @import url('./components/nav.scss');
 
+/* Stylesheet for Sidebars*/
+
+@import url('./components/bars.scss');
+
 /*Stylesheet for authentication pages*/
 
 @import url('./components/auth.scss');
-
-/* Gloal stylesheet*/
-
-@import url('./components/globals.scss');
