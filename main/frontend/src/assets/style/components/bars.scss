@@ -1,3 +1,16 @@
 .side-bar {
-    a {}
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 3%;
+    height: 100%;
+    background: #74a3cc2b;
+    width: max-content;
+    padding: 1%;
+    a {
+        margin-bottom: 99%;
+        color: #718494;
+        font-size: 25px;
+    }
 }

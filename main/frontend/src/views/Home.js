@@ -1,6 +1,10 @@
 import React from 'react';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
+import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
+import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
+import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import PermPhoneMsgOutlinedIcon from '@mui/icons-material/PermPhoneMsgOutlined';
 import PropTypes from 'prop-types';
 import applogo from '../assets/images/afterhours-logo.png';
 import { NavBar } from '../components';
@@ -38,8 +42,12 @@ constructor(props) {
        
    
         <div className="side-bar">
-           <a href=""><DashboardIcon/></a>
-           <a href=""><CalendarMonthIcon/></a>
+           <a href=""><GridViewOutlinedIcon/></a>
+           <a href=""><CalendarMonthOutlinedIcon/></a>
+           <a href=""><BookmarkBorderOutlinedIcon/></a>
+           <a href=""><SendOutlinedIcon/></a>
+              <a href=""><PermPhoneMsgOutlinedIcon /></a>
+              <a href=""><SettingsOutlinedIcon/></a>
             </div>  
             
                <div className="app-body">
