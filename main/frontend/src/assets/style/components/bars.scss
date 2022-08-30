@@ -3,14 +3,28 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding-top: 3%;
+    padding-top: 3% !important;
     height: 100%;
-    background: #74a3cc2b;
     width: max-content;
     padding: 1%;
+    box-shadow: 1px 1px 10px #7184949e;
+    position: fixed;
     a {
-        margin-bottom: 99%;
+        margin-bottom: 70%;
         color: #718494;
         font-size: 25px;
+        height: 36px;
+        width: 36px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        transition: 0.3s;
+        &:hover {
+            background: #718494;
+            transition: 0.3s;
+            color: white;
+        }
     }
 }
