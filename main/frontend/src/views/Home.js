@@ -1,5 +1,6 @@
 import React from 'react';
- 
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import PropTypes from 'prop-types';
 import applogo from '../assets/images/afterhours-logo.png';
 import { NavBar } from '../components';
@@ -33,9 +34,16 @@ constructor(props) {
 
     render() {
         return <>
-           <div className='container-fluid h-100vh row'>
-        <nav></nav>
-
+           <div className='w-100 h-100vh '>
+       
+        <div className="app-body">
+            <div className="side-bar">
+           <a href=""><DashboardIcon/></a>
+           <a href=""><CalendarMonthIcon/></a>
+            </div>
+            <div className="middle-bar"></div>
+            <div className="right-bar"></div>
+        </div> <nav></nav>
            </div>
         </>;
     }
