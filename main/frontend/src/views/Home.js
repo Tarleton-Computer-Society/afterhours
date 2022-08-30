@@ -41,7 +41,15 @@ constructor(props) {
                <div className="app-body">
                <nav></nav>
                 <div className="app-content">
-            <div className="middle-bar"></div>
+            <div className="middle-bar">
+                <section className="dash-sect">
+                    <div className="container">
+                        <h2>Recent Group Activty</h2>
+                        <section className='summary-sect'></section>
+                        </div>
+
+                </section>
+            </div>
             <div className="right-bar"></div>
         </div> 
         </div>
