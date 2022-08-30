@@ -34,17 +34,7 @@ constructor(props) {
     render() {
         return <>
            <div className='container-fluid h-100vh row'>
-        <div className="first-bar">
-            <div className="top-logo">
-                <img src={applogo} alt="logo" />
-            </div>
-            <div className="sidebar">
-                 
-              <a href=""><i className='bx bxs-dashboard'></i></a>
-            </div>
-        </div>
-        <div className="middle-bar"></div>
-        <div className="last-bar"></div>
+        <nav></nav>
 
            </div>
         </>;
