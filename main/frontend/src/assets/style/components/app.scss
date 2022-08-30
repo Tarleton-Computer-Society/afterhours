@@ -1,3 +1,10 @@
-.app-body {
-    height: 100vh
+.main-app {
+    .app-body {
+        height: 100vh;
+        nav {}
+        .app-content {
+            .middle-bar {}
+            .right-bar {}
+        }
+    }
 }

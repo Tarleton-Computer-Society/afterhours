@@ -34,16 +34,21 @@ constructor(props) {
 
     render() {
         return <>
-           <div className='w-100 h-100vh '>
+           <div className='main-app w-100 h-100vh '>
        
-        <div className="app-body">
-            <div className="side-bar">
+   
+        <div className="side-bar">
            <a href=""><DashboardIcon/></a>
            <a href=""><CalendarMonthIcon/></a>
-            </div>
+            </div>  
+            
+               <div className="app-body">
+               <nav></nav>
+                <div className="app-content">
             <div className="middle-bar"></div>
             <div className="right-bar"></div>
-        </div> <nav></nav>
+        </div> 
+        </div>
            </div>
         </>;
     }
