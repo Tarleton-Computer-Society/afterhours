@@ -42,7 +42,7 @@ constructor(props) {
        <Sidebar/>
             
                <div className="app-body">
-               <nav></nav>
+             <NavBar/>
                 <div className="app-content">
             <div className="middle-bar">
                 <section className="dash-sect">
