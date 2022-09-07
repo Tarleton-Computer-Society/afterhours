@@ -31,7 +31,10 @@ constructor(props) {
     };
 }
 
+
+
     render() {
+        // write a code to find ip address
         return <>
            <div className='main-app w-100 h-100vh '>
        
