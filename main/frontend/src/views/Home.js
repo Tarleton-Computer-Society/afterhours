@@ -45,10 +45,10 @@ constructor(props) {
              <NavBar/>
                 <div className="app-content">
             <div className="middle-bar">
-                <section className="dash-sect">
+                <div className="dash-sect">
                     
                         <h2>Recent Group Activty</h2>
-                        <section className='summary-sect'>
+                        <div className='summary-sect'>
 
                         <div className="summ-sect-card">
                             <h3>
@@ -57,33 +57,49 @@ constructor(props) {
                             <span>
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident quas unde nesciunt ad soluta suscipit eos dolorum mollitia delectus, ea architecto consequatur, reprehenderit eveniet, eum facere illo possimus recusandae inventore!
                             </span>
-                        </div>    <div className="summ-sect-card">
-                            <h3>
-                                Intro to Computer Science
-                            </h3>
-                            <span>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident quas unde nesciunt ad soluta suscipit eos dolorum mollitia delectus, ea architecto consequatur, reprehenderit eveniet, eum facere illo possimus recusandae inventore!
-                            </span>
+                        </div>   
                         </div>
-                        <div className="summ-sect-card">
-                            <h3>
-                                Intro to Computer Science
-                            </h3>
-                            <span>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident quas unde nesciunt ad soluta suscipit eos dolorum mollitia delectus, ea architecto consequatur, reprehenderit eveniet, eum facere illo possimus recusandae inventore!
-                            </span>
-                        </div>  <div className="summ-sect-card">
-                            <h3>
-                                Intro to Computer Science
-                            </h3>
-                            <span>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident quas unde nesciunt ad soluta suscipit eos dolorum mollitia delectus, ea architecto consequatur, reprehenderit eveniet, eum facere illo possimus recusandae inventore!
-                            </span>
-                        </div>
-                        </section>
                        
 
-                </section>
+                </div>
+                <div className="dash-sect">
+                    
+                    <h2>Recent Group Activty</h2>
+                    <div className='summary-sect'>
+
+                    <table class="table events-table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>  
+                    </div>
+                   
+
+            </div>
             </div>
             <div className="right-bar"></div>
         </div> 

@@ -1,6 +1,5 @@
-$headertextcolor: #8397a7;
-$bigbarscolor: #dae2e8;
-;
+$headertextcolor: #fefefe;
+$bigbarscolor:#3286c559;
 .main-app {
     display: flex;
     flex-direction: row;
@@ -9,7 +8,7 @@ $bigbarscolor: #dae2e8;
         height: 100vh;
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 95%;
         nav {}
         .app-content {
             display: flex;
@@ -29,24 +28,39 @@ $bigbarscolor: #dae2e8;
                 border-width: 1px;
                 border-color: #c8d0d6;
             }
-            section.dash-sect {
+            .dash-sect {
+                margin-bottom: 3%;
+                .events-table {
+                    background-color: white;
+                    border-radius: 7px;
+                    thead {
+                        background-color: #f5f5f5;
+                        border-radius: 7px;
+                        th {
+                            color: $bigbarscolor;
+                            font-weight: 500;
+                            font-size: 14px;
+                            border-radius: 7px;
+                            padding: 10px;
+                        }
+                    }
+                }
                 h2 {
                     color: $headertextcolor;
                     font-weight: 450;
                     font-family: poppins;
                     font-size: 19px;
                 }
-                section.summary-sect {
+                .summary-sect {
                     display: flex;
                     flex-direction: row;
-                    overflow-x: scroll;
                     width: 100%;
                     .summ-sect-card {
                         width: 50%;
                         background-color: white;
                         margin-right: 2%;
                         padding: 10px;
-                        border-radius: 10px;
+                        border-radius: 7px;
                         h2 {
                             font-size: 15px;
                             font-weight: 400;
@@ -65,10 +79,6 @@ $bigbarscolor: #dae2e8;
                 border-radius: 10px;
                 height: 100%;
                 width: 28%;
-                background: $bigbarscolor;
-                border-style: solid;
-                border-width: 1px;
-                border-color: #c8d0d6
             }
         }
     }

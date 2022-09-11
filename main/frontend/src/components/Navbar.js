@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../assets/images/afterhours-logo.png' // import logo
+import Logo from '../assets/images/longlogo.png' // import logo
  
 
 export default function NavBar() {
@@ -8,7 +8,7 @@ export default function NavBar() {
       <div className='logo-container'>
         <img  className='logo' src={Logo}/>
       </div>
-      <h1 className='nav-heading'>AfterHours</h1>
+ 
       {/*} Search bar goes here 9/7/2022 Domanic Devivo-->{*/}
       <input type="text" placeholder="Search.."/>
 
