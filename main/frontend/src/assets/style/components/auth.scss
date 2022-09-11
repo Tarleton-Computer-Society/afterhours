@@ -21,7 +21,7 @@
         box-shadow: 0px 0px 8px #8080804d;
         background-color: white;
         padding: 20px;
-        width: 40%;
+        width:40%;
         border-radius: 5px;
         button {
             width: 100%;
@@ -63,6 +63,22 @@
             text-decoration: none;
             width: 100%;
             cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .auth-body {
+        .auth-form {
+            width: 60%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .auth-body {
+        .auth-form {
+            width: 80%;
         }
     }
 }
