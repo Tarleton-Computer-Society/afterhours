@@ -46,10 +46,42 @@ constructor(props) {
                 <div className="app-content">
             <div className="middle-bar">
                 <section className="dash-sect">
-                    <div className="container">
+                    
                         <h2>Recent Group Activty</h2>
-                        <section className='summary-sect'></section>
+                        <section className='summary-sect'>
+
+                        <div className="summ-sect-card">
+                            <h3>
+                                Intro to Computer Science
+                            </h3>
+                            <span>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident quas unde nesciunt ad soluta suscipit eos dolorum mollitia delectus, ea architecto consequatur, reprehenderit eveniet, eum facere illo possimus recusandae inventore!
+                            </span>
+                        </div>    <div className="summ-sect-card">
+                            <h3>
+                                Intro to Computer Science
+                            </h3>
+                            <span>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident quas unde nesciunt ad soluta suscipit eos dolorum mollitia delectus, ea architecto consequatur, reprehenderit eveniet, eum facere illo possimus recusandae inventore!
+                            </span>
                         </div>
+                        <div className="summ-sect-card">
+                            <h3>
+                                Intro to Computer Science
+                            </h3>
+                            <span>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident quas unde nesciunt ad soluta suscipit eos dolorum mollitia delectus, ea architecto consequatur, reprehenderit eveniet, eum facere illo possimus recusandae inventore!
+                            </span>
+                        </div>  <div className="summ-sect-card">
+                            <h3>
+                                Intro to Computer Science
+                            </h3>
+                            <span>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident quas unde nesciunt ad soluta suscipit eos dolorum mollitia delectus, ea architecto consequatur, reprehenderit eveniet, eum facere illo possimus recusandae inventore!
+                            </span>
+                        </div>
+                        </section>
+                       
 
                 </section>
             </div>
