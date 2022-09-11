@@ -9,6 +9,19 @@ export default function NavBar() {
         <img  className='logo' src={Logo}/>
       </div>
       <h1 className='nav-heading'>AfterHours</h1>
+      {/*} Search bar goes here 9/7/2022 Domanic Devivo-->{*/}
+      <input type="text" placeholder="Search.."/>
+
+      <div className="user-short-info">
+        <div class = 'split left'>
+          <span class="dot"></span>
+        </div>
+
+        <div class = 'split right'>
+          <p>Jane Doe</p>
+          <p>Freshmen,CS Major</p>
+        </div>
+      </div>
     </div>
   )
 }
