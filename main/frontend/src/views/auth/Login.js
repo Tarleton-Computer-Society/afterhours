@@ -44,7 +44,8 @@ function Login(props) {
 <div class="form-floating">
   <input type="password" class="form-control" id="floatingPassword" placeholder="Password"/>
   <label for="floatingPassword">Password</label>
-  <span className='for-pas'>forgot password?</span>
+  <span className='for-pas'>
+    <a href="/resetpassword"> forgot password?</a></span>
 </div>  <div class="mb-3  ">
   
   <button type="submit" class="btn btn-primary">Login</button></div>
