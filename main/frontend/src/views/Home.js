@@ -39,10 +39,10 @@ constructor(props) {
            <div className='main-app w-100 h-100vh '>
        
    
-       <Sidebar/>
+       <Sidebar active='home'/>
             
                <div className="app-body">
-             <NavBar/>
+    
                 <div className="app-content">
             <div className="middle-bar">
                 <div className="dash-sect">
@@ -101,7 +101,18 @@ constructor(props) {
 
             </div>
             </div>
-            <div className="right-bar"></div>
+            <div className="right-bar">
+            <div className="user-short-info">
+        <div class = 'split left user-img'>
+          <span class="dot">JD</span>
+        </div>
+
+        <div class = 'username'>
+          <label>Jane Doe</label>
+          <p>Freshmen, CS Major</p>
+        </div>
+      </div>
+            </div>
         </div> 
         </div>
            </div>

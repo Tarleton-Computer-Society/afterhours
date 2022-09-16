@@ -37,7 +37,7 @@ const defaultProps = {};
                  
                   <div className="auth-body">
                    <div className="auth-form">
-                       <h2>Register | Afterhours</h2>
+                       <h2>Register  </h2>
                        <form>         <div class="form-floating mb-3">
          <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"/>
          <label for="floatingInput">First Name</label>

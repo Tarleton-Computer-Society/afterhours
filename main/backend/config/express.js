@@ -1,6 +1,6 @@
 /**
-* Created by Vadym Yatsyuk on 05.08.18
-*/
+ * Created by Vadym Yatsyuk on 05.08.18
+ */
 const express = require('express');
 const morgan = require("morgan");
 const bodyParser = require('body-parser');
@@ -12,12 +12,13 @@ const swaggerUi = require('swagger-ui-express');
 
 
 const {
-logs
+    logs
 } = require("./vars");
 const winston = require("./winston");
 const routes = require('../api/routes/v1');
+const authRoutes = require('../api/routes/auth');
 const {
-swaggerDocument
+    swaggerDocument
 } = require('../swagger/swagger');
 
 const app = express();
@@ -28,7 +29,7 @@ app.use(morgan(logs));
 // parse body params and attache them to req.body
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-extended: true
+    extended: true
 }));
 
 // gzip compression
@@ -46,7 +47,8 @@ app.use(cors());
 
 
 // mount api v1 routes
-app.use('/api/v1', routes);
+app.use('/api/', routes);
+app.use('/api/auth', authRoutes);
 
 // swagger
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));

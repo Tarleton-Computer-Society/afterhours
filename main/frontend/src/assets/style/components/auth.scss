@@ -1,3 +1,4 @@
+$bigbarscolor:#718494;
 .auth-col {
     display: flex;
     flex-direction: column
@@ -26,6 +27,8 @@
         button {
             width: 100%;
             font-weight: 600;
+            background-color: $bigbarscolor;
+            border: none;
         }
         .hrh {
             width: 100%;
@@ -69,9 +72,6 @@
 
 .authnav {
     padding: 10px;
-    border-style: solid;
-    border-width: 0px 0px 1px;
-    border-color: #808080;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
