@@ -33,7 +33,7 @@ const defaultProps = {};
          }
                return (<>
                <div className="auth-col">
-       <AuthNavBar />
+       <AuthNavBar where='register'/>
                  
                   <div className="auth-body">
                    <div className="auth-form">

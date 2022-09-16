@@ -67,6 +67,16 @@
     }
 }
 
+.authnav {
+    padding: 10px;
+    border-style: solid;
+    border-width: 0px 0px 1px;
+    border-color: #808080;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
 @media screen and (max-width: 1200px) {
     .auth-body {
         .auth-form {

@@ -31,7 +31,7 @@ function Login(props) {
   }
         return (<>
         <div className="auth-col">
-<AuthNavBar />
+<AuthNavBar where='login' />
           
            <div className="auth-body">
             <div className="auth-form">
@@ -48,7 +48,7 @@ function Login(props) {
     <a href="/resetpassword"> forgot password?</a></span>
 </div>  <div class="mb-3  ">
   
-  <button type="submit" class="btn btn-primary">Login</button></div>
+  <button type="submit" class="btn btn-primary"><label><i class='bx bx-right-arrow-alt'></i></label>Login</button></div>
                     </form>
                  
                     

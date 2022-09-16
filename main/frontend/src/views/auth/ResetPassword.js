@@ -28,7 +28,7 @@ function ResetPassword(props) {
  
         return (<>
         <div className="auth-col">
-<AuthNavBar />
+<AuthNavBar where='resetpassword'/>
           
            <div className="auth-body">
             <div className="auth-form">
