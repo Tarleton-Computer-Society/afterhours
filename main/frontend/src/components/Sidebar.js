@@ -10,48 +10,22 @@ export default function Sidebar(props) {
 
 return (
 <>
-<div className='sideb-m'>
-<div className="logo">
-<img src={logo} alt="logo" />
+<div className="sidebar">
+
+<a className='applogo'><i class='bx bxs-hourglass'></i><label htmlFor="">A</label></a>
+
+
+<div className='sideitems'>
+
+<a href='./'><i class='bx bxs-dashboard'></i></a>
+<a href='./search'><i class='bx bxs-search'></i></a>
+<a href='./groups'> <i class='bx bxs-group' ></i></a>
+<a href='./messages'><i class='bx bxs-conversation'></i></a>
+<a><i class='bx bxs-calendar'></i></a>
+<a><i class='bx bxs-bookmark-alt'></i></a>
+<a><i class='bx bxs-phone-call'></i></a>
 </div>
-
-<div className="side-bar">
-
-{props.active === 'home' ?
- <a href="" className='active'><GridViewOutlinedIcon/>
-<label htmlFor="">Dashboard</label>
-</a>
-: 
-<a href=""><GridViewOutlinedIcon/>
-<label htmlFor="">Dashboard</label>
-</a>}
-
-{props.active === 'calendar' ?
-  <a href="" className='active'><CalendarMonthOutlinedIcon/>
-  <label htmlFor="">Calendar</label>
-  </a>
-  :
-
-<a href=""><CalendarMonthOutlinedIcon/>
-<label htmlFor="">Schedule</label>
-</a>}
-
-{props.active === 'resources' ?
-  <a href="" className='active'><BookmarkBorderOutlinedIcon/>
-  <label htmlFor="">Resources</label>
-  </a>
-  :
-
-<a href=""><BookmarkBorderOutlinedIcon/>
-<label htmlFor="">Resources</label></a>}
-<a href=""><SendOutlinedIcon/>
-<label htmlFor="">Messages</label></a>
-   <a href=""><PermPhoneMsgOutlinedIcon />
-   <label htmlFor="">Call</label>
-   </a>
-   <a href=""><SettingsOutlinedIcon/>
-   <label htmlFor="">Settings</label>
-   </a>
- </div>
+</div>
  
- </div></>)  }
+ 
+ </>)  }
