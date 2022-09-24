@@ -9,7 +9,6 @@ $bigbarscolor:rgb(85, 116, 175);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     background-color: white;
     .auth-form {
         h2 {
@@ -71,10 +70,14 @@ $bigbarscolor:rgb(85, 116, 175);
 }
 
 .authnav {
-    padding: 10px;
+    padding: 4px 20px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    border-color: rgba(84, 116, 174, 0.1882352941);
+    border-width: 0px 0px 1px;
+    border-style: solid;
+    margin-bottom: 3%;
 }
 
 @media screen and (max-width: 1200px) {

@@ -25,9 +25,10 @@ const defaultProps = {};
 export default function AuthNavBar(props) {
     return <>
     <div className="authnav">
-  <a href="./">  <label>
-        <img src={applogo} alt="logo" className="logo"/>
-        </label></a>
+  <a href="./"> 
+  
+  <a className='applogo'><i class='bx bxs-hourglass'></i><label htmlFor="">A</label></a>
+        </a>
         <div className="authnav-right">
             {/* {props.where == 'login' &&  <a href="/register">Register</a> }
             {props.where  == 'registetr' && <a href="/register">Login</a>}

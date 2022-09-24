@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { AuthNavBar } from '../../components';
  
 import { useHistory,Redirect } from 'react-router-dom';
@@ -26,11 +26,14 @@ const defaultProps = {};
  */
  
     function Register(props) {
- 
-        let history = useHistory();
-        function handleRedirect(where) {
-           history.push(where);
-         }
+      function handleRegister(e){
+      e.preventDefault();
+      }
+        const [firstname,setFirstname] =useState('');
+        const [lastname,setLastname]=useState('');
+        const [email,setEmail]=useState('');
+        const [password,setPassword] =useState('');
+        
                return (<>
                <div className="auth-col">
        <AuthNavBar where='register'/>
@@ -38,25 +41,26 @@ const defaultProps = {};
                   <div className="auth-body">
                    <div className="auth-form">
                        <h2>Register  </h2>
-                       <form>         <div class="form-floating mb-3">
-         <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"/>
+                       <form onSubmit={handleRegister} >    
+                       <div class="form-floating mb-3">
+         <input onClick={e => setFirstname(e.target.value)}value={firstname}type="text" class="form-control" id="floatingInput" placeholder="name@example.com"/>
          <label for="floatingInput">First Name</label>
        </div>         <div class="form-floating mb-3">
-         <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"/>
+         <input onClick={e=>setLastname(e.target.value)}value={lastname}type="text" class="form-control" id="floatingInput" placeholder="name@example.com"/>
          <label for="floatingInput">Last Name</label>
        </div>
                         
                        <div class="form-floating mb-3">
-         <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
+         <input value={email} onClick={e=>setEmail(e.target.value)}type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
          <label for="floatingInput">Email address</label>
        </div>
        <div class="form-floating">
-         <input type="password" class="form-control" id="floatingPassword" placeholder="Password"/>
+         <input value={password} onClick={e=>setPassword(e.target.value)}type="password" class="form-control" id="floatingPassword" placeholder="Password"/>
          <label for="floatingPassword">Password</label>
         
        </div>  <div class="mb-3  mt-3">
          
-  <button type="submit" class="btn btn-primary">SignUp</button></div>
+  <button onClick={handleRegister}type="submit" class="btn btn-primary">SignUp</button></div>
                     </form>
                  
                     
