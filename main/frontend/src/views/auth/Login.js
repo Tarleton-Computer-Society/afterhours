@@ -1,21 +1,8 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { AuthNavBar } from '../../components';
 import PropTypes from 'prop-types';
 import { useHistory,Redirect } from 'react-router-dom';
 
-// #region constants
-
-// #endregion
-
-// #region styled-components
-
-// #endregion
-
-// #region functions
-
-// #endregion
-
-// #region component
 const propTypes = {};
 
 const defaultProps = {};
@@ -24,7 +11,34 @@ const defaultProps = {};
  * 
  */
 function Login(props) {
- 
+const [email, setEmail] =useState('')
+const [emailerror, setEmailerror]=useState(false)
+const [emailerrortext, setEmailerrortext]=useState('')
+const [password, setPassword] =useState('')
+const [passworderror, setPassworderror]=useState(false)
+const [passwordtext, setPassworderrortext] = useState('')
+const handleChange =(e) =>{
+if(e.target.name === 'email'){
+setEmail(e.target.value)
+
+}}
+function handleSubmit(e){
+e.preventDefault()
+if(email.trim() ==''){
+setEmailerror(true)
+setEmailerrortext('Email is required')
+
+
+}
+if(password == ''){
+setPassworderror(true)
+setPassworderrortext('Password is required')
+
+
+
+
+}
+}
  let history = useHistory();
  function handleRedirect(where) {
     history.push(where);
@@ -38,17 +52,17 @@ function Login(props) {
                 <h2>Login  </h2>
                 <form>
                 <div class="form-floating mb-3">
-  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
+  <input onChange={e=> handleChange(e)} value={email} name='email'type="email" class={emailerror==true ?'form-control is-invalid':'form-control'} id="floatingInput" placeholder="name@example.com"/>
   <label for="floatingInput">Email address</label>
 </div>
 <div class="form-floating">
-  <input type="password" class="form-control" id="floatingPassword" placeholder="Password"/>
+  <input onChange={e=> handleChange(e)} value={password}  type="password" name='password'class="form-control" id="floatingPassword" placeholder="Password"/>
   <label for="floatingPassword">Password</label>
   <span className='for-pas'>
     <a href="/resetpassword"> forgot password?</a></span>
 </div>  <div class="mb-3  ">
   
-  <button type="submit" class="btn btn-primary"><label><i class='bx bx-right-arrow-alt'></i></label>Login</button></div>
+  <button onClick={handleSubmit} type="submit" class="btn btn-primary"><label><i class='bx bx-right-arrow-alt'></i></label>Login</button></div>
                     </form>
                  
                     
@@ -60,6 +74,6 @@ function Login(props) {
         </>);
     }
  
- 
+  
 
-export default Login;
+export default Login
