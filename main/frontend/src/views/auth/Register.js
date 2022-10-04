@@ -58,6 +58,23 @@ const defaultProps = {};
         
         
         }
+        if(firstname == ''){
+          setFirstnamerror(true)
+          setFirstnamerrortext('Fistname is required')
+          
+          
+          
+          
+          }
+          if(lastname == ''){
+            setLastnamerror(true)
+            setLastnamerrortext('Lastname is required')
+            
+            
+            
+            
+            }
+          
         if(password.length < 6){
           setPassworderror(true)
           setPassworderrortext('Password must be at least 6 characters')
@@ -72,7 +89,7 @@ const defaultProps = {};
         const [firstnamerrortext,setFirstnamerrortext] =useState('')
         const [lastname,setLastname]=useState('');
         const [lastnamerror,setLastnamerror] =useState(false)
-        const [lastnameerrortext,setLastnameerrortext] =useState('')
+        const [lastnamerrortext,setLastnamerrortext] =useState('')
         const [email,setEmail]=useState('');
         const [emailerror,setEmailerror]=useState(false);
         const [emailerrortext,setEmailerrortext]=useState('')
@@ -89,20 +106,36 @@ const defaultProps = {};
                        <h2>Register  </h2>
                        <form onSubmit={handleRegister} >    
                        <div class="form-floating mb-3">
-         <input onClick={e => setFirstname(e.target.value)}value={firstname}type="text" class="form-control" id="floatingInput" placeholder="name@example.com"/>
+         <input onChange={e => handleChange(e)}value={firstname}type="text"name='firstname'  class={firstnamerror==true ?'form-control is-invalid':'form-control'} id="floatingInput" placeholder="name@example.com"/>
          <label for="floatingInput">First Name</label>
+         {firstnamerror==true?<>
+  <div id="validationServer03Feedback" class="invalid-feedback">
+{firstnamerrortext}  </div>
+</>:null}
        </div>         <div class="form-floating mb-3">
-         <input onClick={e=>setLastname(e.target.value)}value={lastname}type="text" class="form-control" id="floatingInput" placeholder="name@example.com"/>
+         <input onChange={e => handleChange(e)}value={lastname}type="text" name='lastname'  class={lastnamerror==true ?'form-control is-invalid':'form-control'} id="floatingInput" placeholder="name@example.com"/>
          <label for="floatingInput">Last Name</label>
+         {lastnamerror==true?<>
+  <div id="validationServer03Feedbeack" class="invalid-feedback">
+{lastnamerrortext}  </div>
+</>:null}
        </div>
                         
                        <div class="form-floating mb-3">
-         <input value={email} onClick={e=>setEmail(e.target.value)}type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
+         <input value={email} onChange={e => handleChange(e)}type="email"  name='email'class={emailerror==true ?'form-control is-invalid':'form-control'} id="floatingInput" placeholder="name@example.com"/>
          <label for="floatingInput">Email address</label>
+         {emailerror==true?<>
+  <div id="validationServer03Feedback" class="invalid-feedback">
+{emailerrortext}  </div>
+</>:null}
        </div>
        <div class="form-floating">
-         <input value={password} onClick={e=>setPassword(e.target.value)}type="password" class="form-control" id="floatingPassword" placeholder="Password"/>
+         <input value={password} onChange={e => handleChange(e)}type="password" name='password' class={passworderror==true ?'form-control is-invalid':'form-control'} id="floatingPassword" placeholder="Password"/>
          <label for="floatingPassword">Password</label>
+         {passworderror==true?<>
+  <div id="validationServer03Feedback" class="invalid-feedback">
+{passworderrortext}  </div>
+</>:null}
         
        </div>  <div class="mb-3  mt-3">
          
