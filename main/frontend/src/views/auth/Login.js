@@ -21,23 +21,42 @@ const handleChange =(e) =>{
 if(e.target.name === 'email'){
 setEmail(e.target.value)
 
-}}
+}if(e.target.name === 'password'){
+  setPassword(e.target.value)
+  
+  }}
 function handleSubmit(e){
 e.preventDefault()
+
+
 if(email.trim() ==''){
 setEmailerror(true)
 setEmailerrortext('Email is required')
 
 
+}else{
+  setEmailerror(false)
+  setEmailerrortext('')
 }
 if(password == ''){
+
 setPassworderror(true)
 setPassworderrortext('Password is required')
 
 
 
 
-}
+}else{
+  if(password.length < 6){
+    setPassworderror(true)
+    setPassworderrortext('Password must be at least 6 characters')
+    
+    
+    
+    
+    }else{
+  setPassworderror(false)
+  setPassworderrortext('')}}
 }
  let history = useHistory();
  function handleRedirect(where) {
@@ -52,17 +71,27 @@ setPassworderrortext('Password is required')
                 <h2>Login  </h2>
                 <form>
                 <div class="form-floating mb-3">
-  <input onChange={e=> handleChange(e)} value={email} name='email'type="email" class={emailerror==true ?'form-control is-invalid':'form-control'} id="floatingInput" placeholder="name@example.com"/>
+  <input onChange={e=> handleChange(e)} valvue={email} name='email'type="email" class={emailerror==true ?'form-control is-invalid':'form-control'} id="floatingInput" placeholder="name@example.com"/>
   <label for="floatingInput">Email address</label>
+{emailerror==true?<>
+  <div id="validationServer03Feedback" class="invalid-feedback">
+{emailerrortext}
+    </div>
+</>:null}
 </div>
 <div class="form-floating">
-  <input onChange={e=> handleChange(e)} value={password}  type="password" name='password'class="form-control" id="floatingPassword" placeholder="Password"/>
+  <input onChange={e=> handleChange(e)} value={password}  type="password" name='password'class={passworderror==true ?'form-control is-invalid':'form-control'} id="floatingPassword" placeholder="Password"/>
   <label for="floatingPassword">Password</label>
+  {passworderror==true?<>
+  <div id="validationServer03Feedback" class="invalid-feedback">
+{passwordtext}
+    </div>
+</>:null}
   <span className='for-pas'>
     <a href="/resetpassword"> forgot password?</a></span>
 </div>  <div class="mb-3  ">
   
-  <button onClick={handleSubmit} type="submit" class="btn btn-primary"><label><i class='bx bx-right-arrow-alt'></i></label>Login</button></div>
+  <button onClick={handleSubmit} type="submit" class="btn btn-primary"> Login</button></div>
                     </form>
                  
                     

@@ -1,12 +1,17 @@
  const bcrypt = require('bcryptjs');
  const jwt = require('jsonwebtoken');
  const passport = require('passport');
- const validateRegisterInput = require('../validation/register');
- const validateLoginInput = require('../validation/login');
- const httpStatus = require('http-status');
 
+ const httpStatus = require('http-status');
+ const User = require('../models/user')
  exports.register = (req, res) => {
-     res.status(httpStatus.OK);
+     const { firstname, lastname, email, password } = req.body;
+
+     newUser = new User({
+         firstname: firstname,
+         lastname: lastname,
+         email: email,
+     })
      return res.json({
          register: 'ok'
      });

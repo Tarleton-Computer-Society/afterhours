@@ -12,13 +12,10 @@ const UserSchema = new Schema({
         type: String,
         required: true
     },
-    username: {
-        type: String,
-        required: true
-    },
+
     role: {
         type: String,
-        required: true
+        default: 'user'
 
     },
     email: {
@@ -33,9 +30,7 @@ const UserSchema = new Schema({
         type: Boolean,
         default: false
     },
-    avatar: {
-        type: String
-    },
+
     date: {
         type: Date,
         default: Date.now

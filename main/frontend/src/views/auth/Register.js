@@ -26,13 +26,59 @@ const defaultProps = {};
  */
  
     function Register(props) {
-      function handleRegister(e){
-      e.preventDefault();
-      }
+      const handleChange =(e) =>{
+        if(e.target.name === 'email'){
+        setEmail(e.target.value)
+        
+        }
+        if(e.target.name === 'password'){
+          setPassword(e.target.value)
+          
+          }
+       
+        if(e.target.name === 'firstname'){
+        setFirstname(e.target.value)
+        }
+        if(e.target.name === 'lastname'){
+        setLastname(e.target.value)
+        } }
+        function handleRegister(e){
+        e.preventDefault()
+        if(email.trim() ==''){
+        setEmailerror(true)
+        setEmailerrortext('Email is required')
+        
+        
+        }
+        if(password == ''){
+        setPassworderror(true)
+        setPassworderrortext('Password is required')
+        
+        
+        
+        
+        }
+        if(password.length < 6){
+          setPassworderror(true)
+          setPassworderrortext('Password must be at least 6 characters')
+          
+          
+          
+          
+          }
+        }
         const [firstname,setFirstname] =useState('');
+        const [firstnamerror,setFirstnamerror] =useState(false);
+        const [firstnamerrortext,setFirstnamerrortext] =useState('')
         const [lastname,setLastname]=useState('');
+        const [lastnamerror,setLastnamerror] =useState(false)
+        const [lastnameerrortext,setLastnameerrortext] =useState('')
         const [email,setEmail]=useState('');
+        const [emailerror,setEmailerror]=useState(false);
+        const [emailerrortext,setEmailerrortext]=useState('')
         const [password,setPassword] =useState('');
+        const [passworderror,setPassworderror]=useState(false);
+        const [passworderrortext,setPassworderrortext]=useState('');
         
                return (<>
                <div className="auth-col">
