@@ -1,0 +1,40 @@
+.groups-side-bar {
+    width: 100%;
+    .top {
+        border-style: solid;
+        border-width: 0px 0px 1px;
+        border-color: #c8d4e0;
+        padding-bottom: 5px;
+        label {
+            margin-right: 3%;
+            font-family: poppins;
+            font-size: 0.65rem;
+            color: #c8d4e0;
+            padding: 1px 6px;
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+            &.active,
+            &:hover {
+                transition: 0.3s;
+                color: white;
+                background-color: #5474ae;
+            }
+        }
+    }
+    .body {
+        width: 100%;
+        .group-list {
+            width: 100%;
+            label {
+                font-family: poppins;
+                width: 100%;
+                color: #5474ae;
+                padding: 17px 0;
+                border-style: solid;
+                border-width: 0px 0px 1px;
+                border-color: #c8d4e0;
+            }
+        }
+    }
+}

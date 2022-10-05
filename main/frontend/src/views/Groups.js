@@ -1,8 +1,9 @@
-import React from 'react';
+import React,{useState} from 'react';
 import PropTypes from 'prop-types';
 import applogo from '../assets/images/afterhours-logo.png';
 import { NavBar } from '../components';
 import { Sidebar } from '../components';
+
 // #region constants
 
 // #endregion
@@ -24,8 +25,15 @@ const defaultProps = {};
  * 
  */
 
-function Messages(props) {
-
+function Groups(props) {
+const [grouptypeview, setGrouptypeview] = useState('majors');
+function shufflegrouptypeview(){
+if(grouptypeview === 'majors'){
+setGrouptypeview('courses')
+}else if(grouptypeview === 'courses'){
+setGrouptypeview('majors')
+}
+}
 return (
 <>
 
@@ -35,7 +43,7 @@ return (
 <div className='message-info'>
 <div className='msg-top'>
 <div className="msg-header">
-<h5>Messages</h5>
+<h5>Groups</h5>
 <a><i class='bx bx-edit'></i></a>
 </div>
 <div className='msg-search'>
@@ -46,26 +54,30 @@ return (
 </div>
 <div className='msg-body'>
 {/* make a loop  */}
-{
+ 
+<div className="groups-side-bar">
+<div className="top">
+<label onClick={shufflegrouptypeview} className={grouptypeview=='majors'&&'active'} htmlFor="">Majors</label>
+<label onClick={shufflegrouptypeview} className={grouptypeview=='courses'&&'active'}htmlFor="">Courses</label>
+</div>
+<div className="body">
 
-[1,2,3,4,5,6,7,8,9,0].map((item, index)=>{
- return (
-<div className="msg-user">
-<div className="msg-user-img">
-<img src="https://media-cldnry.s-nbcnews.com/image/upload/newscms/2022_06/3534450/220210-barack-obama-mn-1445.jpg" alt="" />
-</div>
-<div className="msg-user-info">
-<div className="msg-user-info-top">
-<label htmlFor="">Teddy Oweh</label>
-<small>Dec 08</small>
-</div>
-<div className="msg-user-info-body">
-<span>Lorem, ipsum dolor sit amet consectetur </span>
-<small>2</small>
-</div>
+<div className="group-list">
 
+<label htmlFor="">
+Computer Science
+</label>
+<label htmlFor="">
+Computer Science
+</label>
+<label htmlFor="">
+Computer Science
+</label><label htmlFor="">
+Computer Science
+</label>
 </div>
-</div>)})}
+</div>
+</div>
 
 </div>
 
@@ -110,8 +122,8 @@ return (
 </>
 )
 }
-Messages.propTypes = propTypes;
-Messages.defaultProps = defaultProps;
+Groups.propTypes = propTypes;
+Groups.defaultProps = defaultProps;
 // #endregion
 
-export default Messages;
+export default Groups;
