@@ -28,6 +28,8 @@
     .body {
         width: 100%;
         .group-list {
+            overflow-y: scroll;
+            max-height: 78vh;
             width: 100%;
             label {
                 font-family: poppins;

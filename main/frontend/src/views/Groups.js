@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import applogo from '../assets/images/afterhours-logo.png';
 import { NavBar } from '../components';
 import { Sidebar } from '../components';
+import majorsdata from '../assets/data/majors.json';
 
 // #region constants
 
@@ -27,6 +28,7 @@ const defaultProps = {};
 
 function Groups(props) {
 const [grouptypeview, setGrouptypeview] = useState('majors');
+const [majorlist, setMajorlist] = useState(majorsdata);
 function shufflegrouptypeview(){
 if(grouptypeview === 'majors'){
 setGrouptypeview('courses')
@@ -34,6 +36,7 @@ setGrouptypeview('courses')
 setGrouptypeview('majors')
 }
 }
+console.log(majorlist)
 return (
 <>
 
@@ -63,18 +66,15 @@ return (
 <div className="body">
 
 <div className="group-list">
+{majorlist && majorlist.map((majorss,index)=>{
+return (
+<label htmlFor="">
 
-<label htmlFor="">
-Computer Science
-</label>
-<label htmlFor="">
-Computer Science
-</label>
-<label htmlFor="">
-Computer Science
-</label><label htmlFor="">
-Computer Science
-</label>
+{majorss.major}
+</label>)
+})}
+
+ 
 </div>
 </div>
 </div>

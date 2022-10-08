@@ -108,19 +108,7 @@ return (
 <NavBar/>
 <div className='dashboard-bar msc-w'>
   <div className='chatbox'>
-<div className="chat-top">
-  <div className="chat-header-info">
-  <div className="chat-user-top-left">
-  <div className="chat-user-img">
-<img src="https://media-cldnry.s-nbcnews.com/image/upload/newscms/2022_06/3534450/220210-barack-obama-mn-1445.jpg" alt="" />
-</div>
-<div className="chat-user-name">
-<label htmlFor="">Teddy Oweh</label>
-<small><span></span> <label htmlFor="">Active</label></small>
-</div>
-</div>
-</div>
-</div>
+ 
 {/* Caller ID */}
 <div class="caller-id">
   <div class="caller">
