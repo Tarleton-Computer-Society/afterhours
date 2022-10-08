@@ -71,6 +71,8 @@ return (
 <img src="https://e7.pngegg.com/pngimages/782/114/png-clipart-profile-icon-circled-user-icon-icons-logos-emojis-users.png" alt="" />
 </div>
 <div className="caller-info">
+
+{typeView=='recents'&&<> 
 <div className="caller-info-top">
 <label htmlFor="">[NAME]</label>
 <small>[DATE]</small>
@@ -79,24 +81,22 @@ return (
 <span>00:00</span>
 <small>#</small>
 </div>
+
+</>}
+{typeView=='people'&&<> 
+<div className="caller-info-top">
+<label htmlFor="">[NAME]</label>
+ 
+</div>
+ 
+
+</>}
+
+
 </div>
 </div>
 
-<div className="caller" onClick={displayCaller}>
-<div className="caller-img">
-<img src="https://e7.pngegg.com/pngimages/782/114/png-clipart-profile-icon-circled-user-icon-icons-logos-emojis-users.png" alt="" />
-</div>
-<div className="caller-info">
-<div className="caller-info-top">
-<label htmlFor="">[NAME]</label>
-<small>[DATE]</small>
-</div>
-<div className="caller-info-body">
-<span>00:00</span>
-<small>#</small>
-</div>
-</div>
-</div>
+
 
 </div>
 </div>
