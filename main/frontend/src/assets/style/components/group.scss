@@ -14,11 +14,14 @@
             border-radius: 10px;
             transition: 0.3s;
             cursor: pointer;
-            &.active,
             &:hover {
                 transition: 0.3s;
                 color: white;
-                background-color: #5474ae;
+                background-color: rgb(133, 157, 202);
+            }
+            &.active {
+                color: white;
+                background-color: rgb(84, 116, 174);
             }
         }
     }

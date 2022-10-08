@@ -24,7 +24,7 @@ return (
 <a href='./messages'><i class='bx bxs-conversation'></i><p class="label">MESSAGES</p></a>
 <a><i class='bx bxs-calendar'></i><p class="label">CALENDAR</p></a>
 <a><i class='bx bxs-bookmark-alt'></i><p class="label">[BLANK]</p></a>
-<a href='./calls'><i class='bx bxs-phone-call'></i><p class="label">Calls</p></a>
+<a href='./calls'><i class='bx bxs-phone-call'></i><p class="label">CALLS</p></a>
 </div>
 </div>
  

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import applogo from '../assets/images/afterhours-logo.png';
 import { NavBar } from '../components';
 import { Sidebar } from '../components';
+import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 
 // #region constants
 
@@ -24,14 +25,17 @@ const defaultProps = {};
 /**
  * 
  */
+function displayCaller() {
+  document.getElementByClass("caller").classList.toggle("toggle-caller");
+}
 
 function Calls(props) {
-const [grouptypeview, setGrouptypeview] = useState('majors');
-function shufflegrouptypeview(){
-if(grouptypeview === 'majors'){
-setGrouptypeview('courses')
-}else if(grouptypeview === 'courses'){
-setGrouptypeview('majors')
+const [typeView, setView] = useState('people');
+function shuffleView(){
+if(typeView === 'people'){
+setView('recents')
+}else if(typeView === 'recents'){
+setView('people')
 }
 }
 return (
@@ -39,43 +43,61 @@ return (
 
 <div className='appbody'>
 <Sidebar/>
-<div className='message-section'>
-<div className='message-info'>
-<div className='msg-top'>
-<div className="msg-header">
+<div className='call-section'>
+<div className='call-info'>
+<div className='top'>
+<div className="header">
 <h5>Calls</h5>
 <a><i class='bx bx-edit'></i></a>
 </div>
-<div className='msg-search'>
+<div className='search'>
 <input placeholder='Search'></input>
 <a><i class='bx bx-search'></i></a>
 </div>
 
 </div>
-<div className='msg-body'>
+<div className='body'>
 {/* make a loop  */}
  
-<div className="groups-side-bar">
-<div className="top">
-<label onClick={shufflegrouptypeview} className={grouptypeview=='majors'&&'active'} htmlFor="">Majors</label>
-<label onClick={shufflegrouptypeview} className={grouptypeview=='courses'&&'active'}htmlFor="">Courses</label>
+<div className="calls-side-bar">
+<div className="top-buttons">
+<label onClick={shuffleView} className={typeView=='people'&&'active'} htmlFor="">People</label>
+<label onClick={shuffleView} className={typeView=='recents'&&'active'} htmlFor="">Recents</label>
 </div>
 <div className="body">
 
-<div className="group-list">
-
-<label htmlFor="">
-Computer Science
-</label>
-<label htmlFor="">
-Computer Science
-</label>
-<label htmlFor="">
-Computer Science
-</label><label htmlFor="">
-Computer Science
-</label>
+<div className="caller" onClick={displayCaller}>
+<div className="caller-img">
+<img src="https://e7.pngegg.com/pngimages/782/114/png-clipart-profile-icon-circled-user-icon-icons-logos-emojis-users.png" alt="" />
 </div>
+<div className="caller-info">
+<div className="caller-info-top">
+<label htmlFor="">[NAME]</label>
+<small>[DATE]</small>
+</div>
+<div className="caller-info-body">
+<span>00:00</span>
+<small>#</small>
+</div>
+</div>
+</div>
+
+<div className="caller" onClick={displayCaller}>
+<div className="caller-img">
+<img src="https://e7.pngegg.com/pngimages/782/114/png-clipart-profile-icon-circled-user-icon-icons-logos-emojis-users.png" alt="" />
+</div>
+<div className="caller-info">
+<div className="caller-info-top">
+<label htmlFor="">[NAME]</label>
+<small>[DATE]</small>
+</div>
+<div className="caller-info-body">
+<span>00:00</span>
+<small>#</small>
+</div>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -97,25 +119,29 @@ Computer Science
 <small><span></span> <label htmlFor="">Active</label></small>
 </div>
 </div>
-<div className="chat-user-help"><i class='bx bx-dots-vertical-rounded'></i></div>
+</div>
+</div>
+{/* Caller ID */}
+<div class="caller-id">
+  <div class="caller">
+<img src="https://e7.pngegg.com/pngimages/782/114/png-clipart-profile-icon-circled-user-icon-icons-logos-emojis-users.png" alt="" />
+<p class="caller-name">Jane Doe</p>
+<p class="time-of-call">00:00</p>
+{/* Call Options */}
+<div class="call-options">
+  <div class="icon-bg">
+  <i class='bx bxs-conversation' id="icon"></i>
+  <p class="label">Message</p>
   </div>
-  <div className="chat-body"></div></div>
-  
-  <div className="chat-bottom">
-  <div className="chat-message-box">
-  <input placeholder='Type Message ... ' type="text" />
-  <div className="chat-message-box-btns">
-  <a><i class='bx bx-microphone'></i></a>
-  
-  <a><i class='bx bx-file'></i></a>
-
-  <a><i class='bx bx-send'></i></a>
+  <div class="icon-bg">
+    <i class="bx bxs-phone-call" id="icon"></i>
+    <p class="label">Call Back</p>
   </div>
-  </div></div>
-  
-  
-  </div>
-  
+</div>
+<p class="call-status">Missed Call</p>
+</div>
+</div>
+</div>
 </div></div>
 </div>
 </div>
