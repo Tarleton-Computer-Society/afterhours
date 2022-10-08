@@ -85,6 +85,7 @@
             margin: 3% 0;
             max-height: 81vh;
             overflow-y: scroll;
+            height: 81vh;
             .msg-user {
                 cursor: pointer;
                 &:nth-last-child(1) {
