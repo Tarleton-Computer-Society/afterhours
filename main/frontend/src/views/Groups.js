@@ -29,6 +29,8 @@ const defaultProps = {};
 function Groups(props) {
 const [grouptypeview, setGrouptypeview] = useState('majors');
 const [majorlist, setMajorlist] = useState(majorsdata);
+const [majorlist1, setMajorlist1] = useState(majorsdata);
+const [searchinput, setSearchinput] = useState('');
 function shufflegrouptypeview(){
 if(grouptypeview === 'majors'){
 setGrouptypeview('courses')
@@ -37,6 +39,22 @@ setGrouptypeview('majors')
 }
 }
 console.log(majorlist)
+function searchMajors(e){
+setSearchinput(e.target.value)
+setMajorlist(majorlist1.filter(major => major.major.toLowerCase().includes(searchinput.toLowerCase())))
+
+function filterMajors(){
+  if(searchinput === ''){
+    return majorlist
+    }else{
+    return majorlist.filter((major)=>{
+    return major.major.toLowerCase().includes(searchinput.toLowerCase())
+    })
+    }
+  
+  }
+
+}
 return (
 <>
 
@@ -50,7 +68,7 @@ return (
 <a><i class='bx bx-edit'></i></a>
 </div>
 <div className='msg-search'>
-<input placeholder='Search'></input>
+<input onChange={e=>searchMajors(e)}value={searchinput}placeholder='Search'></input>
 <a><i class='bx bx-search'></i></a>
 </div>
 
