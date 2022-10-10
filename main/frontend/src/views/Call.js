@@ -25,8 +25,8 @@ const defaultProps = {};
 /**
  * 
  */
-function displayCaller() {
-  document.getElementByClass("caller").classList.toggle("toggle-caller");
+function acceptCall() {
+  
 }
 
 function Calls(props) {
@@ -66,7 +66,7 @@ return (
 </div>
 <div className="body">
 
-<div className="caller" onClick={displayCaller}>
+<div className="caller">
 <div className="caller-img">
 <img src="https://e7.pngegg.com/pngimages/782/114/png-clipart-profile-icon-circled-user-icon-icons-logos-emojis-users.png" alt="" />
 </div>
@@ -116,17 +116,40 @@ return (
 <p class="caller-name">Jane Doe</p>
 <p class="time-of-call">00:00</p>
 {/* Call Options */}
-<div class="call-options">
+{/*<div class="call-options">
   <div class="icon-bg">
   <i class='bx bxs-conversation' id="icon"></i>
   <p class="label">Message</p>
   </div>
   <div class="icon-bg">
-    <i class="bx bxs-phone-call" id="icon"></i>
+    <i class="bx bxs-phone-outgoing" id="icon"></i>
     <p class="label">Call Back</p>
   </div>
 </div>
-<p class="call-status">Missed Call</p>
+<p class="call-status">Missed Call</p> */}
+{/* During a call */}
+  {/* Incoming Call */}
+    <div class="incoming-call-options">
+      <div class="icon-bg">
+        <i class= 'bx bxs-timer' id="icon"></i>
+        <p class="label">Remind</p>
+      </div>
+      <div class="icon-bg">
+        <i class="bx bxs-conversation" id="icon"></i>
+        <p class="label">Message</p>
+      </div>
+    </div>
+    <div class="call-options">
+      <div class="answer-icon-bg" onClick={acceptCall}>
+        <i class="bx bxs-phone" id="answer-icon"></i>
+        <p class="label">Accept</p>
+      </div>
+      <div class="decline-icon-bg">
+        <i class="bx bxs-phone-off" id="decline-icon"></i>
+        <p class="label">Decline</p>
+      </div>
+    </div>
+    <p class="call-status">Incoming Call</p> 
 </div>
 </div>
 </div>
