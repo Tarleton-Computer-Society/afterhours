@@ -228,9 +228,16 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    .chat-middle {
+        background: linear-gradient(45deg, #4d708f54, #4d708f00);
+        padding: 10px;
+        height: 102%;
+    }
     .chat-top {
         display: flex;
         flex-direction: column;
+        box-shadow: 0px 8px 11px #dddedfa1;
+        ;
         .chat-header-info {
             padding: 2% 3%;
             border-color: #c8d4e0;
