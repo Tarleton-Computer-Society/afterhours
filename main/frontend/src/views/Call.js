@@ -25,18 +25,24 @@ const defaultProps = {};
 /**
  * 
  */
-function acceptCall() {
-  
-}
+
 
 function Calls(props) {
 const [typeView, setView] = useState('people');
+const [callView, setCallView] = useState('incoming')
 function shuffleView(){
 if(typeView === 'people'){
 setView('recents')
 }else if(typeView === 'recents'){
 setView('people')
 }
+}
+
+function acceptCall() {
+  setCallView('accepted')
+}
+function declineCall() {
+  setCallView('missed')
 }
 return (
 <>
@@ -115,8 +121,10 @@ return (
 <img src="https://e7.pngegg.com/pngimages/782/114/png-clipart-profile-icon-circled-user-icon-icons-logos-emojis-users.png" alt="" />
 <p class="caller-name">Jane Doe</p>
 <p class="time-of-call">00:00</p>
+
 {/* Call Options */}
-{/*<div class="call-options">
+{callView=='missed'&&<>
+<div class="call-options">
   <div class="icon-bg">
   <i class='bx bxs-conversation' id="icon"></i>
   <p class="label">Message</p>
@@ -126,9 +134,12 @@ return (
     <p class="label">Call Back</p>
   </div>
 </div>
-<p class="call-status">Missed Call</p> */}
+<p class="call-status">Missed Call</p>
+</>}
+
 {/* During a call */}
   {/* Incoming Call */}
+  {callView=='incoming'&&<>
     <div class="incoming-call-options">
       <div class="icon-bg">
         <i class= 'bx bxs-timer' id="icon"></i>
@@ -144,12 +155,25 @@ return (
         <i class="bx bxs-phone" id="answer-icon"></i>
         <p class="label">Accept</p>
       </div>
-      <div class="decline-icon-bg">
+      <div class="decline-icon-bg" onClick={declineCall}>
         <i class="bx bxs-phone-off" id="decline-icon"></i>
         <p class="label">Decline</p>
       </div>
     </div>
     <p class="call-status">Incoming Call</p> 
+    </>}
+
+  {/* Accepted Call */}
+  {callView=='accepted'&&<>
+  <div class="call-options">
+    <div class="icon-bg">
+      <i class="bx bxs-microphone-off" id="icon"></i>
+      <p class="label">Mute</p>
+    </div>
+  </div>
+  </>}
+  
+
 </div>
 </div>
 </div>
