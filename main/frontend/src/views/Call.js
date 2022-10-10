@@ -30,6 +30,7 @@ const defaultProps = {};
 function Calls(props) {
 const [typeView, setView] = useState('people');
 const [callView, setCallView] = useState('incoming')
+const [callstatus, setCallstatus] = useState('null')
 function shuffleView(){
 if(typeView === 'people'){
 setView('recents')
@@ -39,7 +40,8 @@ setView('people')
 }
 
 function acceptCall() {
-  setCallView('accepted')
+setCallstatus('accepted')
+  // setCallView('accepted')
 }
 function declineCall() {
   setCallView('missed')
@@ -91,7 +93,15 @@ return (
 </>}
 {typeView=='people'&&<> 
 <div className="caller-info-top">
-<label htmlFor="">[NAME]</label>
+<label htmlFor="">Teddy Oweh</label>
+<div className="call-icons">
+<a href="">
+<i class='bx bxs-phone'></i></a>
+<a href="">
+<i class='bx bxs-video'></i></a>
+
+
+</div>
  
 </div>
  
@@ -151,14 +161,17 @@ return (
       </div>
     </div>
     <div class="call-options">
-      <div class="answer-icon-bg" onClick={acceptCall}>
+    {/* onClick={acceptCall} */}
+      <div class={callstatus=='null'?"answer-icon-bg":"answer-icon-bg callactive"} onClick={acceptCall}  >
         <i class="bx bxs-phone" id="answer-icon"></i>
         <p class="label">Accept</p>
       </div>
+      {callstatus == 'null' &&
+      
       <div class="decline-icon-bg" onClick={declineCall}>
         <i class="bx bxs-phone-off" id="decline-icon"></i>
         <p class="label">Decline</p>
-      </div>
+      </div>}
     </div>
     <p class="call-status">Incoming Call</p> 
     </>}

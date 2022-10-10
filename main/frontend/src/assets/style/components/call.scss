@@ -99,7 +99,7 @@
                 justify-content: center;
                 box-shadow: 0px 0px 3px black;
                 flex-direction: column;
-                margin-left:7%;
+                margin-left: 7%;
                 margin-right: 7%;
                 cursor: pointer;
                 #icon {
@@ -109,7 +109,7 @@
                     font-size: 1.4rem;
                 }
                 &:hover {
-                    transform: translate(0,-5px);
+                    transform: translate(0, -5px);
                     .label {
                         opacity: 100%;
                         transition: 0.3s;
@@ -159,7 +159,7 @@
                     margin: 20px;
                 }
                 &:hover {
-                    transform: translate(0,-5px);
+                    transform: translate(0, -5px);
                     .label {
                         opacity: 100%;
                         transition: 0.3s;
@@ -188,7 +188,7 @@
                 border-radius: 100%;
                 display: flex;
                 justify-content: center;
-                box-shadow: 0px 0px 3px black;
+                box-shadow: 0px 0px 13px #beb5b5d9;
                 flex-direction: column;
                 margin-left: 10%;
                 margin-right: 10%;
@@ -198,8 +198,19 @@
                     justify-content: center;
                     margin: 20px;
                 }
+                &.callactive {
+                    transform: rotate(135deg);
+                    animation-name: callfunction;
+                    animation-duration: 3s;
+                    animation-fill-mode: forwards;
+                    transition: 0.8s;
+                    background-color: #ab1616e3;
+                }
+                &:focus {
+                    background-color: black !important;
+                }
                 &:hover {
-                    transform: translate(0,-5px);
+                    transform: translate(0, -5px);
                     .label {
                         opacity: 100%;
                         transition: 0.3s;
@@ -242,7 +253,7 @@
                     margin: 20px;
                 }
                 &:hover {
-                    transform: translate(0,-5px);
+                    transform: translate(0, -5px);
                     .label {
                         opacity: 100%;
                         transition: 0.3s;
@@ -397,6 +408,22 @@
                             font-family: poppins;
                             font-size: 14px;
                         }
+                        .call-icons {
+                            padding-left: 1px;
+                            border-style: solid;
+                            border-width: 0px;
+                            border-left-width: 1px;
+                            border-color: #c8d4e0;
+                            i {
+                                color: #223d6ead;
+                                text-shadow: 0px 0px 15px #80808066;
+                            }
+                            a {
+                                padding: 0 6px;
+                                font-size: 19px;
+                                color: #223d6e
+                            }
+                        }
                     }
                     .caller-info-body {
                         display: flex;
@@ -432,5 +459,17 @@
         .caller {
             display: none;
         }
+    }
+}
+
+@keyframes callfunction {
+    0% {
+        transform: translateX(10%);
+    }
+    25% {
+        transform: translateX(20%);
+    }
+    100% {
+        transform: translateX(30%);
     }
 }

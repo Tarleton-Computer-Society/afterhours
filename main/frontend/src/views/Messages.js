@@ -87,8 +87,11 @@ return (
 </div>
 <div className="chat-user-help"><i class='bx bx-dots-vertical-rounded'></i></div>
   </div>
-  <div className="chat-body"></div></div>
+  <div className="chat-body">
   
+  
+  </div></div>
+  <div className='chat-middle'></div>
   <div className="chat-bottom">
   <div className="chat-message-box">
   <input placeholder='Type Message ... ' type="text" />
