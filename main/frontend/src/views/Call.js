@@ -170,6 +170,16 @@ return (
       <i class="bx bxs-microphone-off" id="icon"></i>
       <p class="label">Mute</p>
     </div>
+    <div class="icon-bg">
+      <i class="bx bxs-user-plus" id="icon"></i>
+      <p class="label">Add</p>
+    </div>
+  </div>
+  <div class="call-options">
+    <div class="decline-icon-bg">
+      <i class="bx bxs-phone" id="decline-icon"></i>
+      <p class="label">End</p>
+    </div>
   </div>
   </>}
   
