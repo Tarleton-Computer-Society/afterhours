@@ -85,7 +85,16 @@ return (
 <small><span></span> <label htmlFor="">Active</label></small>
 </div>
 </div>
-<div className="chat-user-help"><i class='bx bx-dots-vertical-rounded'></i></div>
+<div className="chat-user-help">
+<div className="call-icons">
+<a href="">
+<i class='bx bxs-phone'></i></a>
+<a href="">
+<i class='bx bxs-video'></i></a>
+
+
+</div>
+<i class='bx bx-dots-vertical-rounded'></i></div>
   </div>
   <div className="chat-body">
   
