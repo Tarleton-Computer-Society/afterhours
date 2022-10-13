@@ -253,13 +253,17 @@
                 .call-icons {
                     display: flex;
                     align-items: center;
+                    margin-right: 3%;
                     a {
-                        padding: 0 10px;
+                        border-radius: 6px;
+                        margin-right: 5%;
+                        padding: 4px 10px;
                         font-size: 18px;
-                        color: #223d6e;
+                        background-color: #425f942b;
                     }
                     i {
                         color: #223d6e;
+                        ;
                     }
                 }
             }
