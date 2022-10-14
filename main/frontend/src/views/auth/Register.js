@@ -43,25 +43,29 @@ const defaultProps = {};
         setLastname(e.target.value)
         } }
         function handleRegister(e){
+       
         e.preventDefault()
+        const arr =[]
         if(email.trim() ==''){
         setEmailerror(true)
         setEmailerrortext('Email is required')
+        arr.push('error')
         
         
         }
         if(password == ''){
         setPassworderror(true)
         setPassworderrortext('Password is required')
-        
+        arr.push('error')
         
         
         
         }
         if(firstname == ''){
           setFirstnamerror(true)
+          arr.push('error')
           setFirstnamerrortext('Fistname is required')
-          
+          arr.push('error')
           
           
           
@@ -69,7 +73,7 @@ const defaultProps = {};
           if(lastname == ''){
             setLastnamerror(true)
             setLastnamerrortext('Lastname is required')
-            
+            arr.push('error')
             
             
             
@@ -78,12 +82,18 @@ const defaultProps = {};
         if(password.length < 6){
           setPassworderror(true)
           setPassworderrortext('Password must be at least 6 characters')
-          
+          arr.push('error')
           
           
           
           }
+          if(arr.length == 0){
+        
+        
+            }
         }
+        
+     
         const [firstname,setFirstname] =useState('');
         const [firstnamerror,setFirstnamerror] =useState(false);
         const [firstnamerrortext,setFirstnamerrortext] =useState('')
