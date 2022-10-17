@@ -26,6 +26,7 @@ const defaultProps = {};
  */
  
     function Register(props) {
+    const [loader,setLoader]=useState(false);
       const handleChange =(e) =>{
         if(e.target.name === 'email'){
         setEmail(e.target.value)
@@ -46,12 +47,15 @@ const defaultProps = {};
        
         e.preventDefault()
         const arr =[]
-        if(email.trim() ==''){
+        if(email ==''){
         setEmailerror(true)
         setEmailerrortext('Email is required')
         arr.push('error')
         
         
+        }else{
+        setEmailerror(false)
+        setEmailerrortext('s')
         }
         if(password == ''){
         setPassworderror(true)
@@ -61,6 +65,11 @@ const defaultProps = {};
         
         
         }
+        else{
+          setPassworderror(false)
+          setPassworderrortext('')
+          
+          }
         if(firstname == ''){
           setFirstnamerror(true)
           arr.push('error')
@@ -69,6 +78,9 @@ const defaultProps = {};
           
           
           
+          }else{
+          setFirstnamerror(false)
+          setFirstnamerrortext('')
           }
           if(lastname == ''){
             setLastnamerror(true)
@@ -77,6 +89,9 @@ const defaultProps = {};
             
             
             
+            }else{
+            setLastnamerror(false)
+            setLastnamerrortext('')
             }
           
         if(password.length < 6){
@@ -86,9 +101,14 @@ const defaultProps = {};
           
           
           
+          }else{
+          setPassworderror(false)
+          setPassworderrortext('')
+          
           }
           if(arr.length == 0){
         
+        setLoader(true)
         
             }
         }
@@ -149,7 +169,7 @@ const defaultProps = {};
         
        </div>  <div class="mb-3  mt-3">
          
-  <button onClick={handleRegister}type="submit" class="btn btn-primary">SignUp</button></div>
+  <button disabled={loader} onClick={handleRegister}type="submit" class="btn btn-primary"><div className={loader==true?'loader':'hidediv'}><i class='bx bx-loader-circle' ></i></div>{loader==false && 'SignUp'}</button></div>
                     </form>
                  
                     
