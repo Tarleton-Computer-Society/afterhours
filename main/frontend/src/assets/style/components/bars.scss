@@ -1,12 +1,13 @@
 .sidebar {
     width: fit-content;
-    height: 96vh;
+    height: 100vh;
     background: rgb(85, 116, 175);
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 54px;
+    /* border-radius: 54px; */
     box-shadow: 0px 0px 8px #7c7c7c;
+    margin-left: -1%;
     .sideitems {
         width: 75px;
         display: flex;
@@ -37,7 +38,7 @@
             &:hover {
                 border-color: white;
                 transition: 0.3s;
-                transform: translate(0,-5px);
+                transform: translate(0, -5px);
                 .label {
                     opacity: 100;
                 }
@@ -61,10 +62,10 @@
         height: fit-content;
         width: 95%;
         margin-bottom: 10px;
-        .applogo{
+        .applogo {
             display: none;
         }
-        .sideitems{
+        .sideitems {
             width: 90%;
             display: flex;
             flex-direction: row;

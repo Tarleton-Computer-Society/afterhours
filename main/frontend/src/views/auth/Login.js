@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import axios from 'axios';
 import { AuthNavBar } from '../../components';
 import PropTypes from 'prop-types';
 import { useHistory,Redirect } from 'react-router-dom';
@@ -17,6 +18,7 @@ const [emailerrortext, setEmailerrortext]=useState('')
 const [password, setPassword] =useState('')
 const [passworderror, setPassworderror]=useState(false)
 const [passwordtext, setPassworderrortext] = useState('')
+const [loader,setLoader]=useState(false);
 const handleChange =(e) =>{
 if(e.target.name === 'email'){
 setEmail(e.target.value)
@@ -28,10 +30,11 @@ setEmail(e.target.value)
 function handleSubmit(e){
 e.preventDefault()
 
-
+const arr = []
 if(email.trim() ==''){
 setEmailerror(true)
 setEmailerrortext('Email is required')
+arr.push('error')
 
 
 }else{
@@ -42,6 +45,7 @@ if(password == ''){
 
 setPassworderror(true)
 setPassworderrortext('Password is required')
+arr.push('error')
 
 
 
@@ -50,6 +54,7 @@ setPassworderrortext('Password is required')
   if(password.length < 6){
     setPassworderror(true)
     setPassworderrortext('Password must be at least 6 characters')
+    arr.push('error')
     
     
     
@@ -57,7 +62,46 @@ setPassworderrortext('Password is required')
     }else{
   setPassworderror(false)
   setPassworderrortext('')}}
+  
+  
+  if(arr.length == 0){
+        
+        
+    setLoader(true);
+    const body ={
+
+    email:email,
+    password:password
+    }
+    axios.post('http://localhost:3001/auth/login',body)
+    .then(res=>{
+   
+    setLoader(false);
+alert('Login Successful')
+  
+    })
+    .catch(err=>{
+   let msg = JSON.stringify(err.response.data.message)
+    msg =msg.replace(/['"]+/g, '')
+    
+    if(msg=='EAE41'){
+    setEmailerror(true)
+    setEmailerrortext('Email not found') 
+    arr.push('error')
+    }if(msg=='PI4'){
+      setPassworderror(true)
+      setPassworderrortext('Password is Incorrect')
+      arr.push('error')
+    }
+   setLoader(false);
+    })
+    
+    
+    }
 }
+
+
+
  let history = useHistory();
  function handleRedirect(where) {
     history.push(where);
@@ -91,7 +135,7 @@ setPassworderrortext('Password is required')
     <a href="/resetpassword"> forgot password?</a></span>
 </div>  <div class="mb-3  ">
   
-  <button onClick={handleSubmit} type="submit" class="btn btn-primary"> Login</button></div>
+<button disabled={loader} onClick={handleSubmit}type="submit" class="btn btn-primary"><div className={loader==true?'loader':'hidediv'}><i class='bx bx-loader-circle' ></i></div>{loader==false && 'Login'}</button></div>
                     </form>
                  
                     

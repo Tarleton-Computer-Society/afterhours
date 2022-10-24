@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import { AuthNavBar } from '../../components';
- 
+import axios from 'axios';
 import { useHistory,Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
@@ -17,10 +17,19 @@ import PropTypes from 'prop-types';
 // #endregion
 
 // #region component
-const propTypes = {};
+const header = {
+  headers: {
+      'Content-Type': 'application/json; charset=utf-8',
+      "Access-Control-Allow-Origin": "http://localhost:3000",
+      "Access-Control-Allow-Credentials": true,
+      "Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST,PUT",
 
-const defaultProps = {};
 
+
+
+
+  }
+}
 /**
  * 
  */
@@ -108,8 +117,31 @@ const defaultProps = {};
           }
           if(arr.length == 0){
         
-        setLoader(true)
+        setLoader(true);
+        const body ={
+        firstname:firstname,
+        lastname:lastname,
+        email:email,
+        password:password
+        }
+        axios.post('http://localhost:3001/auth/register',body)
+        .then(res=>{
+       
+        setLoader(false);
+        window.location.href ='/login'
+      
+        })
+        .catch(err=>{
+       let msg = JSON.stringify(err.response.data.message)
+        msg =msg.replace(/['"]+/g, '')
         
+        if(msg=='EAE4'){
+        setEmailerror(true)
+        setEmailerrortext('Email already exists') 
+        arr.push('error')
+        }
+       setLoader(false);
+        })
             }
         }
         

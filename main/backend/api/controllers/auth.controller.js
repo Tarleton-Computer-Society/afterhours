@@ -8,7 +8,7 @@
      const { firstname, lastname, email, password } = req.body;
      User.findOne({ email }).then(user => {
          if (user) {
-             return res.status(400).json({ email: "Email already exists" });
+             return res.status(400).json({ message: "EAE4" });
          } else {
              newUser = new User({
                  firstname: firstname,
@@ -18,9 +18,33 @@
 
              })
              newUser.save()
+             console.log(newUser)
              return res.json({
                  register: 'ok'
              });
+         }
+
+     })
+ }
+ exports.login = (req, res) => {
+     const { email, password } = req.body;
+     User.findOne({ email }).then(user => {
+         if (!user) {
+             return res.status(400).json({ message: "EAE41" });
+         } else {
+             bcrypt.compare(password, user.password)
+                 .then(isMatch => {
+                     if (!isMatch) {
+                         return res.status(400).json({ message: "PI4" });
+                     } else {
+
+                         return res.json({
+                             register: 'ok'
+                         });
+                     }
+
+                 })
+
          }
 
      })
