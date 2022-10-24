@@ -1,6 +1,4 @@
-/**
- * Created by Vadym Yatsyuk on 06.08.18
- */
+const passport = require('passport');
 const express = require('express');
 
 const controller = require('../../controllers/auth.controller');

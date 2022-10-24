@@ -37,9 +37,24 @@
                      if (!isMatch) {
                          return res.status(400).json({ message: "PI4" });
                      } else {
+                         const payload = {
+                             id: user._id,
+                             firstname: user.firstname,
+                             lastname: user.lastname,
+                             email: user.email
 
-                         return res.json({
-                             register: 'ok'
+                         }
+
+                         jwt.sign(payload, 'secret', {
+                             expiresIn: 3600
+                         }, (err, token) => {
+                             if (err) console.error('There is some error in token', err);
+                             else {
+                                 res.json({
+                                     success: true,
+                                     token: `Bearer ${token}`
+                                 });
+                             }
                          });
                      }
 

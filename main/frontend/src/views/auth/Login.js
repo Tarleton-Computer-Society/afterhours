@@ -1,9 +1,11 @@
 import React,{useState} from 'react';
 import axios from 'axios';
+import jwt_decode from 'jwt-decode';
 import { AuthNavBar } from '../../components';
 import PropTypes from 'prop-types';
+import { GetMyData } from '../../actions/user';
 import { useHistory,Redirect } from 'react-router-dom';
-
+import setAuthToken from '../../setAuthToken';
 const propTypes = {};
 
 const defaultProps = {};
@@ -77,8 +79,13 @@ arr.push('error')
     .then(res=>{
    
     setLoader(false);
-alert('Login Successful')
-  
+ 
+  const token = res.data.token
+  localStorage.setItem('jwtToken', token);
+  setAuthToken(token);
+  const decoded = jwt_decode(token);
+  GetMyData()
+  window.location.href ='/'
     })
     .catch(err=>{
    let msg = JSON.stringify(err.response.data.message)

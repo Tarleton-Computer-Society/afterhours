@@ -1,16 +1,11 @@
  const express = require('express');
+ const passport = require('passport');
 
- const controller = require('../../controllers/main.controller');
+ const controller = require('../../controllers/user.controller');
  const {
      validator
  } = require('../../../swagger/swagger');
-
+ require('../../passport')(passport)
  const router = express.Router();
-
- router.get('/health', controller.health);
-
- router.get('/public', controller.public);
-
- router.post('/objects', validator.validate("post", "/objects"), controller.post);
-
+ router.get('/me', passport.authenticate('jwt', { session: false }), controller.me)
  module.exports = router;

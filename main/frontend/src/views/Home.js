@@ -1,8 +1,9 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import PropTypes from 'prop-types';
 import applogo from '../assets/images/afterhours-logo.png';
 import { NavBar } from '../components';
 import { Sidebar } from '../components';
+import { GetMyData } from '../actions/user';
 // #region constants
 
 // #endregion
@@ -26,6 +27,10 @@ const defaultProps = {};
 
 function Home(props) {
 
+useEffect(() => {
+GetMyData()
+}, []);
+
 return (
 <>
 
@@ -33,7 +38,7 @@ return (
 <Sidebar/>
 
 <div className="middbar">
-<NavBar/>
+{/* <NavBar/> */}
 <div className='dashboard-bar'>
   <section>
   <h4>Recent Activity</h4>
