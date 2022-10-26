@@ -30,7 +30,6 @@ const defaultProps = {};
 function Calls(props) {
 const [typeView, setView] = useState('people');
 const [callView, setCallView] = useState('incoming')
-const [callstatus, setCallstatus] = useState('null')
 function shuffleView(){
 if(typeView === 'people'){
 setView('recents')
@@ -39,12 +38,13 @@ setView('people')
 }
 }
 
+var img = document.getElementsByClassName("caller-img");
 function acceptCall() {
-setCallstatus('accepted')
-  // setCallView('accepted')
+setCallView('accepted')
 }
 function declineCall() {
   setCallView('missed')
+  img.classList.add("terminate-animation")
 }
 return (
 <>
@@ -161,17 +161,16 @@ return (
       </div>
     </div>
     <div class="call-options">
-    {/* onClick={acceptCall} */}
-      <div class={callstatus=='null'?"answer-icon-bg":"answer-icon-bg callactive"} onClick={acceptCall}  >
+    <div class="decline-icon-bg" onClick={declineCall}>
+        <i class="bx bxs-phone-off" id="decline-icon"></i>
+        <p class="label">Decline</p>
+      </div>
+
+      <div class="answer-icon-bg" onClick={acceptCall}>
         <i class="bx bxs-phone" id="answer-icon"></i>
         <p class="label">Accept</p>
       </div>
-      {callstatus == 'null' &&
-      
-      <div class="decline-icon-bg" onClick={declineCall}>
-        <i class="bx bxs-phone-off" id="decline-icon"></i>
-        <p class="label">Decline</p>
-      </div>}
+
     </div>
     <p class="call-status">Incoming Call</p> 
     </>}
