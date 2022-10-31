@@ -3,6 +3,7 @@ import { AuthNavBar } from '../../components';
 import axios from 'axios';
 import { useHistory,Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import majorsdata from '../../assets/data/majors.json';
 
 // #region constants
 
@@ -35,6 +36,7 @@ const header = {
  */
  
     function Register(props) {
+      const [majorlist, setMajorlist] = useState(majorsdata);
     const [loader,setLoader]=useState(false);
       const handleChange =(e) =>{
         if(e.target.name === 'email'){
@@ -115,6 +117,22 @@ const header = {
           setPassworderrortext('')
           
           }
+
+        if(major == ''){
+          setMajorerror(true)
+          setMajorerrortext('Major is required')
+          arr.push('error')
+          
+          
+          
+          }else{
+          setMajorerror(false)
+          setMajorerrortext('')
+          
+   
+
+
+        }
           if(arr.length == 0){
         
         setLoader(true);
@@ -122,7 +140,8 @@ const header = {
         firstname:firstname,
         lastname:lastname,
         email:email,
-        password:password
+        password:password,
+        major:major,
         }
         axios.post('http://localhost:3001/auth/register',body)
         .then(res=>{
@@ -158,7 +177,9 @@ const header = {
         const [password,setPassword] =useState('');
         const [passworderror,setPassworderror]=useState(false);
         const [passworderrortext,setPassworderrortext]=useState('');
-        
+        const [major,setMajor] =useState('');
+        const [majorerror,setMajorerror] =useState(false);
+        const [majorerrortext,setMajorerrortext]=useState('')
                return (<>
                <div className="auth-col">
        <AuthNavBar where='register'/>
@@ -190,6 +211,31 @@ const header = {
   <div id="validationServer03Feedback" class="invalid-feedback">
 {emailerrortext}  </div>
 </>:null}
+       </div>
+
+       <div class="form-floating mb-3">
+
+         {/* <input value={email} onChange={e => handleChange(e)}type="email"  name='email'class={emailerror==true ?'form-control is-invalid':'form-control'} id="floatingInput" placeholder="name@example.com"/> */}
+         {/* <label for="floatingInput">Email address</label>
+         {emailerror==true?<>
+  <div id="validationServer03Feedback" class="invalid-feedback">
+{emailerrortext}  </div>
+</>:null} */}
+<select class={majorerror==true ?'form-select is-invalid':'form-select'} value={major} onChange={e => setMajor(e.target.value)} aria-label="Default select example">
+  <option  selected>Select Major</option>
+{majorlist && majorlist.map((majorss,index)=>{
+return (
+
+  <option  value={majorss.major}>{majorss.major}</option>
+
+ )
+})}
+</select>
+{majorerror==true?<>
+  <div id="validationServer03Feedback" class="invalid-feedback">
+{majorerrortext}  </div>
+</>:null}
+
        </div>
        <div class="form-floating">
          <input value={password} onChange={e => handleChange(e)}type="password" name='password' class={passworderror==true ?'form-control is-invalid':'form-control'} id="floatingPassword" placeholder="Password"/>

@@ -27,10 +27,10 @@ const defaultProps = {};
 
 function Home(props) {
 
-useEffect(() => {
-GetMyData()
-}, []);
-
+  useEffect(() => {
+    GetMyData()
+    }, []);
+    
 return (
 <>
 

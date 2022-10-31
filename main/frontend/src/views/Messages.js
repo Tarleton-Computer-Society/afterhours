@@ -71,7 +71,7 @@ return (
 
 </div>
 <div className="middbar">
-<NavBar/>
+
 <div className='dashboard-bar msc-w'>
   <div className='chatbox'>
 <div className="chat-top">

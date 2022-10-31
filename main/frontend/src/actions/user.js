@@ -14,7 +14,7 @@ export function GetMyData() {
 
         }
     }
-    axios.get("http://localhost:3001/v1/me")
+    axios.get("http://localhost:3001/v1/me",header)
         .then(res => {
             localStorage.setItem("myData", JSON.stringify(res.data));
 
