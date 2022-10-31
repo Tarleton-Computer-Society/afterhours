@@ -1,13 +1,40 @@
 .sidebar {
     width: fit-content;
     height: 100vh;
-    background: rgb(85, 116, 175);
+    background: rgb(38 45 57);
+    border-style: solid;
+    border-width: 1px;
+    border-color: #323944;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* border-radius: 54px; */
-    box-shadow: 0px 0px 8px #7c7c7c;
-    margin-left: -1%;
+    justify-content: space-between;
+    align-content: center;
+    .top{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    .bottom{
+        margin-bottom: 3%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        label{
+            background-color: white;
+            height: 50px;
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+            font-weight: 700;
+            width: 50px;margin-bottom: 13%;
+        }
+
+margin-bottom: 3%;        
+    }
     .sideitems {
         width: 75px;
         display: flex;

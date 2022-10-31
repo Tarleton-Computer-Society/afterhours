@@ -12,7 +12,7 @@ if (!module.parent) {
     );
     app.use('/auth', authroutes);
     app.use('/v1', v1routes);
-    app.listen(port, () => console.info(`Server started on port ${port }`));
+    app.listen(3001, () => console.info(`Server started on port 3001`));
 }
 
 module.exports = app;

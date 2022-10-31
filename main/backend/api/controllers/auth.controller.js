@@ -5,7 +5,7 @@
  const httpStatus = require('http-status');
  const User = require('../models/user')
  exports.register = (req, res) => {
-     const { firstname, lastname, email, password } = req.body;
+     const { firstname, lastname, email, password,major } = req.body;
      User.findOne({ email }).then(user => {
          if (user) {
              return res.status(400).json({ message: "EAE4" });
@@ -14,6 +14,7 @@
                  firstname: firstname,
                  lastname: lastname,
                  email: email,
+                 major:major,
                  password: bcrypt.hashSync(password, 10)
 
              })

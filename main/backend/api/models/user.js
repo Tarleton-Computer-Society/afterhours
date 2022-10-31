@@ -30,11 +30,21 @@ const UserSchema = new Schema({
         type: Boolean,
         default: false
     },
+    major:{
+        type:String,
+    },
+    minor:{
+        type:String,
+    },
+    groups:{
+        type:Array,
+        
+    },
 
     date: {
         type: Date,
         default: Date.now
-    }
+    },
 
 });
 
