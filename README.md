@@ -1,8 +1,10 @@
-# afterhours
-Improved Version of Group Me
+# Afterhours
+An Social Network to connect with students with same majors.
 
 
 ## Teams
+### Project Lead
+- [Teddy Oweh](https://github.com/teddyoweh)
 ### Product / Project Overview Team.
 - [Ambrose Caer](https://github.com/StarsofanImmortal)
 - [Domanic DeVivo](https://github.com/DDevivo98)
