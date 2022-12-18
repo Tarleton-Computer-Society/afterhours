@@ -1,6 +1,8 @@
 # Afterhours
 An Social Network to connect with students with same majors.
 
+## Figma UI Prototype
+[UI DESIGN](https://www.figma.com/file/qrCckBQPLqhXBUT6r6LunZ/Afterhours-UI?node-id=0%3A1&t=leeSeSbD4B4grxiT-1)
 
 ## Teams
 ### Project Lead
