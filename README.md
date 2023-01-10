@@ -1,8 +1,12 @@
-# afterhours
-Improved Version of Group Me
+# Afterhours
+A Social Network to connect with students with same majors.
 
+## Figma UI Prototype
+[UI DESIGN](https://www.figma.com/file/qrCckBQPLqhXBUT6r6LunZ/Afterhours-UI?node-id=0%3A1&t=leeSeSbD4B4grxiT-1)
 
 ## Teams
+### Project Lead
+- [Teddy Oweh](https://github.com/teddyoweh)
 ### Product / Project Overview Team.
 - [Ambrose Caer](https://github.com/StarsofanImmortal)
 - [Domanic DeVivo](https://github.com/DDevivo98)
