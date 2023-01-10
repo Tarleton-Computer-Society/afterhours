@@ -4,17 +4,45 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: 100%;
 }
 
+.unactivechat{
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+
+}
+.unmember{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    button{
+        background: white;
+        border: none;
+        border-radius: 30px;
+        padding: 7px 20px;
+        width: 15%;
+        cursor: pointer;
+    }
+}
 .message-section {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
     .message-info {
-        width: 25%;
+        width: 32%;
     border-style: solid;
-    border-width: 0px 1px 0px 0px;
+    border-width: 0px ;
     border-color: rgba(84, 116, 174, 0.1882352941);
         .msg-top {
             display: flex;
@@ -60,6 +88,7 @@
                     }
                 }
                 input {
+                    color: #c8d4e0;
                     &::placeholder {
                         font-size: 13px;
                         font-family: poppins;
@@ -313,6 +342,9 @@
     .chat-bottom {
         padding: 20px 20px;
         .chat-message-box {
+            form{
+                width: 100%;
+            }
             display: flex;
             flex-direction: row;
             background: #404857;
@@ -327,6 +359,7 @@
                 background: transparent;
                 border-radius: 8px;
                 font-family: poppins;
+                color:#9fa5b2;
                 &::placeholder {
                     color:#9fa5b2;
                     font-family: poppins;

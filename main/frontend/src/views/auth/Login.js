@@ -6,6 +6,9 @@ import PropTypes from 'prop-types';
 import { GetMyData } from '../../actions/user';
 import { useHistory,Redirect } from 'react-router-dom';
 import setAuthToken from '../../setAuthToken';
+import { SET_CURRENT_USER } from '../../actions/types';
+import { setCurrentUser } from '../../reducers/users';
+const {useDispatch,useSelector} = require('react-redux');
 const propTypes = {};
 
 const defaultProps = {};
@@ -14,6 +17,9 @@ const defaultProps = {};
  * 
  */
 function Login(props) {
+  
+  const dispatch = useDispatch();
+ 
 const [email, setEmail] =useState('')
 const [emailerror, setEmailerror]=useState(false)
 const [emailerrortext, setEmailerrortext]=useState('')
@@ -82,8 +88,14 @@ arr.push('error')
  
   const token = res.data.token
   localStorage.setItem('jwtToken', token);
+  axios.defaults.headers.common['Authorization'] = 'Bearer'+ token;
+  localStorage.setItem('user', JSON.stringify(res.data.user));
   setAuthToken(token);
+ 
+
   const decoded = jwt_decode(token);
+  dispatch(setCurrentUser(decoded));
+
   GetMyData()
   window.location.href ='/'
     })

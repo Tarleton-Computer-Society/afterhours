@@ -50,7 +50,7 @@ return (
 
 [1,2,3,4,5,6,7,8,9,0].map((item, index)=>{
  return (
-<div className="msg-user">
+<div className="msg-user" key={index}>
 <div className="msg-user-img">
 <img src="https://media-cldnry.s-nbcnews.com/image/upload/newscms/2022_06/3534450/220210-barack-obama-mn-1445.jpg" alt="" />
 </div>
