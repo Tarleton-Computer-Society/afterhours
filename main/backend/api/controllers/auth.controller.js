@@ -59,7 +59,7 @@
                              firstname: user.firstname,
                              lastname: user.lastname,
                              email: user.email,
-                             name: userfirst+ ' '+ user.lastname,
+                             name: user.firstname+ ' '+ user.lastname,
 
                          }
 
