@@ -24,6 +24,7 @@ A Social Network to connect with students with same majors.
 - [Renato Rios](https://github.com/RenatoRios1)
 - [Bizimana Musa](https://github.com/Bizimanamusa)
 - [Weston Sublett](https://github.com/wsman217)
+- [Ethan Conner](https://github.com/EJ-Conner)
 
 
 ### UI Design Team.
